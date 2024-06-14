@@ -1,0 +1,37 @@
+/* RESUME */
+.cart-resume {
+  width: 340px;
+  flex-direction: column;
+  }
+  .cart-data {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  }
+  .cart-title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  }
+  .cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  .cart-tax {
+  padding-bottom: 10px;
+  }
+  .cart-btn {
+  width: 100%;
+  background: #ff3b3c;
+  color: white;
+  font-weight: bold;
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+  }
+  .cart-btn:hover {
+  background: #ff5151;
+  }
