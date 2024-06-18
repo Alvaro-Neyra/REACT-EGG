@@ -6,4 +6,5 @@ export default interface Product {
     quantity: number;
     images: Array<string>;
     colors: Array<string>;
+    onsale: boolean;
 }

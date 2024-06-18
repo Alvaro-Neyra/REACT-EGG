@@ -1,4 +1,3 @@
-import styles from "./Description.module.css"
 
 export default function Description({ product }) {
   return (
