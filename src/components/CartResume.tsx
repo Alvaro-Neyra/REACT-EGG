@@ -1,6 +1,20 @@
 import Swal from "sweetalert2";
+import { useEffect, useState } from "react";
 
 export default function CartResume({ total }) {
+
+    const [carrito, setCarrito] = useState(() => {
+      const datosGuardados = localStorage.getItem('carrito');
+      return datosGuardados ? JSON.parse(datosGuardados) : [];
+    });
+
+    useEffect(() => { 
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+    }, [carrito]);
+
+    const borrarCarrito = () => {
+      setCarrito([]);
+    };
 
     const handleClick = () => {
         Swal.fire({
@@ -20,8 +34,9 @@ export default function CartResume({ total }) {
                 icon: "success"
               }).then((result) => {
                 if (result.isConfirmed) {
-                  localStorage.removeItem("cart");
-                  window.location.reload();
+                  // localStorage.removeItem("cart");
+                  // window.location.reload();
+                  borrarCarrito();
                 }
               });
             }
